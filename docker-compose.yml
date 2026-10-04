@@ -1,0 +1,10 @@
+services:
+  pyredis:
+    build: .
+    ports: ["6379:6379"]
+    volumes: ["pyredis-data:/app/data"]
+    environment:
+      PYREDIS_AOF: "yes"
+      PYREDIS_MAX_MEMORY: "134217728"
+volumes:
+  pyredis-data:

@@ -1,0 +1,9 @@
+import time,threading
+class Metrics:
+ def __init__(self):self.started=time.time();self.commands=0;self.errors=0;self.lock=threading.Lock()
+ def command(self):
+  with self.lock:self.commands+=1
+ def error(self):
+  with self.lock:self.errors+=1
+ def info(self,store):
+  return {"uptime":int(time.time()-self.started),"commands":self.commands,"errors":self.errors,"keys":store.dbsize(),"hits":store.hits,"misses":store.misses,"evictions":store.evictions,"memory":store.memory_usage()}

@@ -1,0 +1,25 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+data/
+.venv/
+
+# Virtual environments
+venv/
+
+# Local test/output files
+import_test.txt
+pyredis_session.txt
+test_output.txt
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
