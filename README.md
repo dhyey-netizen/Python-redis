@@ -42,5 +42,3 @@ PYTHONPATH=. python benchmarks/benchmark_store.py
 ## Roadmap / hardening
 Authentication/TLS, RESP3 completeness, production fsync policy, replication handshake/partial resync, real cluster membership/failover, ACLs, load tests, fuzzing, crash injection, and benchmark comparison against Redis.
 
-## Resume honesty
-Call this a **production-oriented Redis-compatible in-memory data store**. Do not claim it replaces Redis or has Redis-level production reliability until the hardening roadmap has been completed and independently benchmarked.
